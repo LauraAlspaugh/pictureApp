@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/pictureApp:latest
+    restart: unless-stopped
+    env_file:
+      - pictureApp-env
+    ports:
+      - "7045:80"
